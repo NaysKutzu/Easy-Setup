@@ -3,4 +3,5 @@ The official install script for KoolCDN ubuntu to install use this command right
 
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/KoolKid-Development/KoolCDN-InstallScript/main/script.sh)```
+bash <(curl -s https://raw.githubusercontent.com/KoolKid-Development/KoolCDN-InstallScript/main/script.sh)
+```
