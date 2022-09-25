@@ -1,20 +1,5 @@
 #!/bin/bash
 set -e
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
 if [[ $EUID -ne 0 ]]; then
   echo "* This script must be executed with root privileges (sudo)." 1>&2
   exit 1
@@ -60,6 +45,9 @@ cd /etc/nginx/sites-available
 curl -o cdn.conf https://raw.githubusercontent.com/KoolKid-Development/KoolCDN-InstallScript/main/Files/cdn.conf
 sudo ln -s /etc/nginx/sites-available/cdn.conf /etc/nginx/sites-enabled/cdn.conf
 mkdir /var/www/cdn
+cd /var/www/cdn
+curl -o index.php https://raw.githubusercontent.com/KoolKid-Development/KoolCDN-InstallScript/main/Files/index.php
+curl -o style.css https://raw.githubusercontent.com/KoolKid-Development/KoolCDN-InstallScript/main/Files/style.css
 systemctl stop nginx
 nano /etc/nginx/sites-available/cdn.conf
 echo "No the only thing left is the certificate and to start nginx"
