@@ -1,4 +1,5 @@
 reset
+alias cls='printf "\033c"'
 if [[ $EUID -ne 0 ]]; then
   echo "* This script must be executed with root privileges (sudo)." 1>&2
   exit 1
