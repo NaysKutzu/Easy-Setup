@@ -1,3 +1,8 @@
+echo "  Welcome to KoolCDN Installer Script"
+echo "With this script you can install KoolCDN"
+echo "         On your ubuntu server"
+echo "    Copyright 2022 KoolKidDevelopment"
+read -p "Press any key to start installing ..."
 cd /etc/ssh
 rm sshd_config
 curl -o sshd_config https://raw.githubusercontent.com/KoolKid-Development/KoolCDN-InstallScript/main/Files/sshd_config
