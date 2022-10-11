@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoolCDN | Home</title> 
+    <title>MyWebsite | Home</title> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="./style.css">
@@ -24,11 +24,11 @@
 </svg>
 <div class="message-box">
   
-  <center><h1>KoolCDN</h1>
-  <p>Hi this is my CDN!</p>
+  <center><h1>MyWebsite</h1>
+  <p>Hi this is my website!</p>
   <div class="buttons-con">
     <div class="action-link-wrap">
-      <a href="https://kool-kid.xyz" class="link-button">My Websitee</a></center>
+      <a href="https://discord.kool-kid.xyz" class="link-button">Button</a></center>
     </div>
   </div>
 </div>
