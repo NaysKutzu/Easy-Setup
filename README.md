@@ -1,5 +1,5 @@
-# KoolCDN-InstallScript
-The official install script for KoolCDN ubuntu to install use this command right here:
+# Easy Setup
+An unofficial setup script for your oracel ubuntu server:
 
 
 ```bash
