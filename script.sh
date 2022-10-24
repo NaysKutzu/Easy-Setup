@@ -38,6 +38,8 @@ sudo iptables -t nat -F
 sudo iptables -t mangle -F
 sudo iptables -F
 sudo iptables -X
+apt-get install iptables-persistent
+iptables-save > /etc/iptables/rules.v4
 cd /etc/nginx/sites-available
 rm default
 cd /etc/nginx/sites-enabled
