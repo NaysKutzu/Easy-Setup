@@ -29,8 +29,9 @@ LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 add-apt-repository ppa:redislabs/redis -y
 apt-add-repository universe
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
-apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} nginx certbot python3-certbot-nginx iptables mariadb-server tar unzip git
-sudo apt update && sudo apt upgrade
+apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} nginx certbot python3-certbot-nginx iptables mariadb-server tar unzip git iptables-persistent
+sudo apt update
+sudo apt -y upgrade
 sudo iptables -P INPUT ACCEPT
 sudo iptables -P FORWARD ACCEPT
 sudo iptables -P OUTPUT ACCEPT
@@ -38,7 +39,6 @@ sudo iptables -t nat -F
 sudo iptables -t mangle -F
 sudo iptables -F
 sudo iptables -X
-apt-get install iptables-persistent
 iptables-save > /etc/iptables/rules.v4
 cd /etc/nginx/sites-available
 rm default
