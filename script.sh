@@ -17,12 +17,6 @@ systemctl restart sshd
 echo "We enabled root login and password auth"
 echo "Lets setup a password!"
 sudo passwd
-apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
-LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
-add-apt-repository ppa:redislabs/redis -y
-apt-add-repository universe
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
-apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} nginx certbot python3-certbot-nginx iptables mariadb-server tar unzip git iptables-persistent
 sudo apt update
 sudo apt -y upgrade
 sudo iptables -P INPUT ACCEPT
@@ -38,15 +32,4 @@ rm default
 cd /etc/nginx/sites-enabled
 rm default
 cd /etc/nginx/sites-available
-curl -o website.conf https://raw.githubusercontent.com/KoolKid-Development/Easy-Setup/main/Files/website.conf
-sudo ln -s /etc/nginx/sites-available/website.conf /etc/nginx/sites-enabled/website.conf
-mkdir /var/www/website
-cd /var/www/website
-curl -o index.php https://raw.githubusercontent.com/KoolKid-Development/Easy-Setup/main/Files/index.php
-curl -o style.css https://raw.githubusercontent.com/KoolKid-Development/Easy-Setup/main/Files/style.css
-systemctl stop nginx
-nano /etc/nginx/sites-available/website.conf
-echo "No the only thing left is the certificate and to start nginx"
-echo "Use: certbot certonly --standalone -d yourdomain.com"
-echo "And after that systemctl start nginx"
-echo "And you are done!"
+
